@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: url(./image/bg-home.png);
+  --text-color: #C4C4CC;
+  --text-color-active: #FFFFFF;
+  --text-color-home: #E1E1E6;
+  --text-color-button: #FFFFFF;
+}
+
+body {
+  background-image: var(--bg-color);
+  background-size: cover;
+}
+
+nav {
+  margin-top: 4.0rem;
+  margin-left: 7.2rem;
+}
+
+a {
+  font-family: "Roboto";
+  font-size: 2.4rem;
+  text-decoration: none;
+  padding: 3.2rem;
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--text-color-active);
+}
+
+#home-page {
+display: grid;
+place-items: center;
+}
+
+#home-page h1 {
+  display: grid;
+  place-items: center;
+  font-family: "Roboto";
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-top: 17.2rem;
+  color: var(--text-color-home);
+}
+
+#home-page button {
+  margin-top: 2.4rem;
+  font-family: "Roboto";
+  width: 19.5rem;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  color: var(--text-color-button);
+  cursor: pointer;
+}
+
