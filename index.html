@@ -16,10 +16,20 @@
             <img src="./image/vector.svg" alt="Imagem de um vetor">
         </a>
         <a href="/">Home</a>
-        <a href="/universe">O Universo</a>
-        <a href="/exploration">Exploração</a>
+        <a href="/universe" onclick="changeBackground()">O Universo</a>
+        <a href="/exploration" onclick="changeBackground()">Exploração</a>
     </nav>       
     </div>
+
+    <main class="bg-image">
+        <div class="bg-universe">
+            <img src="./image/bg-universe.png" alt="" hidden>
+        </div>
+        
+        <div class="bg-exploration">
+            <img src="./imagem/bg-exploration" alt="" hidden>
+        </div>
+    </main>
     
     <div id="app"></div>
 

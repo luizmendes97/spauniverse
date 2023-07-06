@@ -1,9 +1,17 @@
 const routes = {
-  "/": "/pages/home.html", // home route
-  "/universe": "/pages/universe.html", // universe route
-  "/exploration": "/pages/exploration.html", // exploration route
-  404: "/pages/404.html", // 404 route
+  "/": "./pages/home.html", // home route
+  "/universe": "./pages/universe.html", // universe route
+  "/exploration": "./pages/exploration.html", // exploration route
+  404: "./pages/404.html", // 404 route
 }
+
+function changeBackground() {
+  let obj=document.getElementById("bg-image");
+  if(obj.className=="bg-universe") {
+    obj.className="bg-home";   
+  } else {
+    obj.className="bg-universe";
+  }
 
 function route(event) {
   event = event || window.event
