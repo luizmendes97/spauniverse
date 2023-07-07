@@ -4,15 +4,6 @@ const routes = {
   "/exploration": "./pages/exploration.html", // exploration route
   404: "./pages/404.html", // 404 route
 }
-
-function changeBackground() {
-  let obj=document.getElementById("bg-image");
-  if(obj.className=="bg-universe") {
-    obj.className="bg-home";   
-  } else {
-    obj.className="bg-universe";
-  }
-
 function route(event) {
   event = event || window.event
   event.preventDefault()
@@ -36,3 +27,30 @@ function handle() {
 handle()
 
 window.onpopstate = () => handle()
+
+function bgChange() {
+  const getPathname = () => {
+    const path = window.location.pathname
+    return path.charAt(0) === "/" ? path.slice(1) : path
+  }
+
+  function changeBackground() {
+    const body = document.body
+    const path = getPathname()
+
+    switch (path) {
+      case "universe":
+        body.style.backgroundImage = "url(./image/bg-universe.png)"
+        break
+      case "exploration":
+        body.style.backgroundImage = "url(./image/bg-exploration.png)"
+        break
+      default:
+        body.style.backgroundImage = "url(./image/bg-home.png)"
+        break
+    }
+  }
+  changeBackground()
+}
+
+bgChange()

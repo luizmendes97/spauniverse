@@ -15,8 +15,8 @@
 }
 
 body {
-  background-image: var(--bg-home);
-  background-size: cover;
+  background: var(--bg-home) no-repeat center center/cover;
+  height: 80vh;
 }
 
 nav {
